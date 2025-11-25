@@ -9,9 +9,11 @@ public class Encryption
     public static void main(String[] args){
         Scanner reader = new Scanner(System.in);
         System.out.println("Welcome to the Encryption / Decryption Program");
-        int chose = reader.nextInt();
-        System.out.println("enter the string");
-        String str = reader.nextLine();
+        System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
+
+        int programNum = reader.nextInt();
+
+        System.out.println("Enter")
     }
     //אוהד חסון + קצת תיקונים(יואב פנסקי)
     public static int wordsNum(String string){
@@ -24,5 +26,4 @@ public class Encryption
         else
             return 3;
     }
-
 }
