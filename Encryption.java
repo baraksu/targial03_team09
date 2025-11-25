@@ -4,17 +4,21 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.util.*;
 public class Encryption
 {
     public static void main(String[] args){
-        Scanner reader = new Scanner(System.in);
+       Scanner reader = new Scanner(System.in);
         System.out.println("Welcome to the Encryption / Decryption Program");
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
 
         int programNum = reader.nextInt();
-        if (checkNum(programNum)) return;
+
+        reader.close();
+        if (Encryption.checkNum(programNum)) return;
 
         System.out.println("Enter up to 3 words sentence");
+        reader.close();
     }
     //אוהד חסון + קצת תיקונים(יואב פנסקי)
     public static int wordsNum(String string){
