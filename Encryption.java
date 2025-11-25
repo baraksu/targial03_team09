@@ -13,7 +13,7 @@ public class Encryption
         System.out.println("enter the string")
         String str = reader.nextLine();
     }
-    \אוהד חסון
+    //אוהד חסון
     public static int wordsNum(string){
         int wordsNum = 0;
         int num1 = string.indexOf(" ");
