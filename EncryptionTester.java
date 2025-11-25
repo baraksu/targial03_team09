@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-
+// :)
 /**
  * Write a description of class EncryptionTester here.
  *
