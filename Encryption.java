@@ -18,7 +18,6 @@ public class Encryption
         if (Encryption.checkNum(programNum)) return;
 
         System.out.println("Enter up to 3 words sentence");
-        reader.close();
     }
     //אוהד חסון + קצת תיקונים(יואב פנסקי)
     public static int wordsNum(String string){
