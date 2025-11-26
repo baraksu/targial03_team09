@@ -15,8 +15,9 @@ public class Encryption
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
 
         int programNum = reader.nextInt();
-        if (Encryption.checkNum(programNum)) reader.close(); return;
-
+        if (Encryption.checkNum(programNum)) {
+            return;
+        }
         System.out.println("Enter up to 3 words sentence");
         String sentence = reader.nextLine();
         
@@ -24,17 +25,14 @@ public class Encryption
 
         if (words > 3) {
             System.out.println(sentence + "is not a valid choice");
-            reader.close();
             return;
         }
         if (programNum == 1) {
             System.out.println("The encrypted sentence: " + Encryption(sentence, words));
-            reader.close();
             return;
         } else {
             System.out.println("The decrypted sentence: " + Decryption(sentence, words));
         }
-        reader.close();
     }
     // יואב פנסקי
      public static int wordsNum(String str) {
