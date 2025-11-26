@@ -63,7 +63,7 @@ public class Encryption
         String word2 = "";
         String word3 = "";
         String result = "";
-        if (words = 2) {
+        if (words == 2) {
             word1 = sentence.substring(0, sentence.indexOf(" "));
             word2 = sentence.substring(sentence.indexOf(" ") + 1, sentence.lastIndexOf(" "));
             result = word2 + ' ' + word1;
