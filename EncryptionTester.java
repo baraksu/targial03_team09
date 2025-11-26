@@ -1,4 +1,4 @@
-// import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 // :)
@@ -13,8 +13,8 @@ public class EncryptionTester
     @Test
     public void testAdd(){
         
-    //    int result = Encryption.add(2,3);
-    //    assertEquals(5,result);
+        String result = Encryption.wordsNum("word1 word2");
+        assertEquals(2,result);
         
     }
     
