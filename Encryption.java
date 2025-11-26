@@ -15,7 +15,7 @@ public class Encryption
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
 
         int programNum = reader.nextInt();
-        if (Encryption.checkNum(programNum)) return;
+        if (Encryption.checkNum(programNum)) reader.close(); return;
 
         reader.nextLine();
         System.out.println("Enter up to 3 words sentence");
@@ -29,11 +29,11 @@ public class Encryption
             return;
         }
         if (programNum == 1) {
-            System.out.println("The encrypted sentence is: " + Encryption(sentence, words));
+            System.out.println("The encrypted sentence: " + Encryption(sentence, words));
             reader.close();
             return;
         } else {
-            System.out.println("The decrypted sentence is: " + Decryption(sentence, words));
+            System.out.println("The decrypted sentence: " + Decryption(sentence, words));
         }
         reader.close();
     }
@@ -58,8 +58,23 @@ public class Encryption
     //תוכנה להצפנת
     //ע"י יואב פנסקי
     public static String Encryption(String sentence, int words) {
+        int word1 = 0;
+        int word2 = 0;
+        int word3 = 0;
+        String result = "";
+        if (words = 2) {
+            word1 = sentence.substring(0, sentence.indexOf(" "));
+            word2 = sentence.substring(sentence.indexOf(" ") + 1, sentence.lastIndexOf(" "));
+            result = word2 + ' ' + word1;
+        } else {
+            word1 = sentence.substring(0, sentence.indexOf(" "));
+            word2 = sentence.substring(sentence.indexOf(" ") + 1, sentence.lastIndexOf(" "));
+            word3 = sentence.substring(sentence.lastIndexOf(" ") + 1);
+            result = word3 + ' ' + word1 + ' ' + word2;
+        }
+       
         char c = sentence.charAt(sentence.length() - words);
-        String result = c + sentence.substring(0, sentence.length() - words);
+        result = c + sentence.substring(0, sentence.length() - words);
         result = result.replace('a', '@');
         result = result.replace('e', '#');
         result = result.replace('i', '1');
@@ -70,13 +85,28 @@ public class Encryption
     //תוכנה לפענוח
     //ע"י יואב פנסקי
     public static String Decryption(String sentence, int words) {
-        char c = sentence.charAt(0);
-        String result = sentence.substring(1) + c;
-        result = result.replace('@', 'a');
+        String result = sentence.replace('@', 'a');
         result = result.replace('#', 'e');
         result = result.replace('1', 'i');
         result = result.replace('0', 'o');
         result = result.replace('&', 'u');
+
+        char c = result.charAt(0);
+        result = result.substring(1) + c;
+
+        int word1 = 0;
+        int word2 = 0;
+        int word3 = 0;
+        if (words == 2) {
+            word1 = result.substring(0, result.indexOf(" "));
+            word2 = result.substring(result.indexOf(" ") + 1, result.lastIndexOf(" "));
+            result = word2 + ' ' + word1;
+        } else {
+            word1 = result.substring(0, result.indexOf(" "));
+            word2 = result.substring(result.indexOf(" ") + 1, result.lastIndexOf(" "));
+            word3 = result.substring(result.lastIndexOf(" ") + 1);
+            result = word2 + ' ' + word3 + ' ' + word1;
+        }
         return result;
     }
 }
