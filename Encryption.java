@@ -18,6 +18,7 @@ public class Encryption
         if (Encryption.checkNum(programNum)) {
             return;
         }
+        reader.nextLine(); // לניקוי השורה
         System.out.println("Enter up to 3 words sentence");
         String sentence = reader.nextLine();
         
