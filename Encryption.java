@@ -13,23 +13,29 @@ public class Encryption
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
 
         int programNum = reader.nextInt();
-
         reader.close();
         if (Encryption.checkNum(programNum)) return;
 
         System.out.println("Enter up to 3 words sentence");
         String sentence = reader.next();
+        int words = countChar(sentence) + 1;
+        if (words > 3) {
+            System.out.println(sentence + "is not a valid choice");
+            return;
+        }
+        if (words == 1) EncryptionOneWord(sentence);
+        else if (words == 2) EncryptionTwoWords(sentence);
+        else EncryptionThreeWords(sentence);
     }
-    //אוהד חסון + קצת תיקונים(יואב פנסקי)
-    public static int wordsNum(String string){
-        int num1 = string.indexOf(" ");
-        int num2 = string.lastIndexOf(" ");
-        if (num1 == -1)
-            return 1;
-        else if (num1 == num2)
-            return 2;
-        else
-            return 3;
+    // יואב פנסקי
+     public static int countChar(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
+                count++;
+            }
+        }
+        return count;
     }
     //תוכנה לבדיקה האם המספר שהוכנס הוא 1 או 2
     //ע"י יואב פנסקי
@@ -38,5 +44,12 @@ public class Encryption
             System.out.println(num + "is not a valid choice");
             return true;
         } else return false;
+    }
+    //תוכנה להצפנת מילה אחת
+    //ע"י יואב פנסקי
+    public static String EncryptionOneWord(String sentence){
+        last letter = sentence.charAt(sentence.length() - 1);
+        String result = sentence.substring(1, sentence.length() - 1) + sentence.charAt(0);
+        return result;
     }
 }
