@@ -1,8 +1,8 @@
 /**
- * Write a description of class Encryption here.
+ * Encryption & Decryption Program
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Yoav Panski and Ohad Hasson
+ * @version 26/11/2025 17:00
  */
 import java.util.*;
 //תוכנה ראשית
