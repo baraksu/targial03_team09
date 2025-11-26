@@ -17,7 +17,6 @@ public class Encryption
         int programNum = reader.nextInt();
         if (Encryption.checkNum(programNum)) reader.close(); return;
 
-        reader.nextLine();
         System.out.println("Enter up to 3 words sentence");
         String sentence = reader.nextLine();
         
