@@ -1,7 +1,7 @@
 /**
  * Encryption & Decryption Program
  *
- * @author Yoav Panski and Ohad Hasson
+ * @author Yoav Panski (219338951)and Ohad Hasson
  * @version 26/11/2025 17:00
  */
 import java.util.*;
@@ -58,9 +58,9 @@ public class Encryption
     //תוכנה להצפנת
     //ע"י יואב פנסקי
     public static String Encryption(String sentence, int words) {
-        int word1 = 0;
-        int word2 = 0;
-        int word3 = 0;
+        String word1 = "";
+        String word2 = "";
+        String word3 = "";
         String result = "";
         if (words = 2) {
             word1 = sentence.substring(0, sentence.indexOf(" "));
@@ -94,9 +94,9 @@ public class Encryption
         char c = result.charAt(0);
         result = result.substring(1) + c;
 
-        int word1 = 0;
-        int word2 = 0;
-        int word3 = 0;
+        String word1 = "";
+        String word2 = "";
+        String word3 = "";
         if (words == 2) {
             word1 = result.substring(0, result.indexOf(" "));
             word2 = result.substring(result.indexOf(" ") + 1, result.lastIndexOf(" "));
