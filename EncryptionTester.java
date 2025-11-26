@@ -13,7 +13,7 @@ public class EncryptionTester
     @Test
     public void testAdd(){
         
-        String result = Encryption.wordsNum("word1 word2");
+        int result = Encryption.wordsNum("word1 word2");
         assertEquals(2,result);
         
     }
