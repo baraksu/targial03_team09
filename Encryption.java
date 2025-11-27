@@ -51,8 +51,8 @@ public class Encryption
     public static boolean checkNum(int num) {
         if (num != 1 && num != 2) {
             System.out.println(num + "is not a valid choice");
-            return true;
-        } else return false;
+            return false;
+        } else return true;
     }
     //תוכנה להצפנת
     //ע"י יואב פנסקי
