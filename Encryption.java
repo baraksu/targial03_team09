@@ -35,12 +35,13 @@ public class Encryption
         }
     }
     // יואב פנסקי
-     public static int wordsNum(String str) {
-        int count = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == ' ') {
-                count++;
-            }
+    public static int wordsNum(String str) {
+        int withSpace = str.length();
+        str = str.replace(" ", "");
+        int withoutspace = str.length();
+        int count = withSpace - withoutspace - 1;
+        return count;
+        }
         }
         count++;
         return count;
