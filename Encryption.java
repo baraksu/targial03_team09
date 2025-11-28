@@ -39,7 +39,7 @@ public class Encryption
         int withSpace = str.length();
         str = str.replace(" ", "");
         int withoutspace = str.length();
-        int count = withSpace - withoutspace - 1;
+        int count = withSpace - withoutspace + 1;
         return count;
         }
         }
