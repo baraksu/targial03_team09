@@ -13,17 +13,16 @@ public class EncryptionTester
     @Test
     public void testAdd(){
         
-        int result = encryption.wordsNum("word1 word2");
+        int result = Encryption.wordsNum("word1 word2");
         assertEquals(2,result);
 
-        boolean bool = encription.chekNum(3);
+        boolean bool = Encryption.checkNum(3);
         assertEquals(bool, true);
 
-        String str = encription.encriptipon("very cool", 2);
+        String str = Encryption.encryption("very cool", 2);
         assertEquals(str, "ryc00l v#");
 
-        str = encrption.decription("ryc00l v#", 2);
-        assertEquls("very cool");
+        str = Encryption.decryption("ryc00l v#", 2);
+        assertEquals("very cool", str);
     }
-    
 }
