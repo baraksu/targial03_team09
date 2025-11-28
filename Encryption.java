@@ -1,5 +1,5 @@
 /**
- * Encryption & Decryption Program
+ * encryption & decryption Program
  *
  * @author Yoav Panski (219338951)and Ohad Hasson(217803477)
  * @version 26/11/2025 17:00
@@ -11,7 +11,7 @@ public class Encryption
 {
     public static void main(String[] args){
         Scanner reader = new Scanner(System.in);
-        System.out.println("Welcome to the Encryption / Decryption Program");
+        System.out.println("Welcome to the encryption / decryption Program");
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
 
         int programNum = reader.nextInt();
@@ -28,10 +28,10 @@ public class Encryption
             return;
         }
         if (programNum == 1) {
-            System.out.println("The encrypted sentence: " + Encryption(sentence, words));
+            System.out.println("The encrypted sentence: " + encryption(sentence, words));
             return;
         } else {
-            System.out.println("The decrypted sentence: " + Decryption(sentence, words));
+            System.out.println("The decrypted sentence: " + decryption(sentence, words));
         }
     }
     // יואב פנסקי
@@ -40,10 +40,6 @@ public class Encryption
         str = str.replace(" ", "");
         int withoutspace = str.length();
         int count = withSpace - withoutspace + 1;
-        return count;
-        }
-        }
-        count++;
         return count;
     }
     //תוכנה לבדיקה האם המספר שהוכנס הוא 1 או 2
@@ -55,8 +51,8 @@ public class Encryption
         } else return false;
     }
     //תוכנה להצפנת
-    //ע"י יואב פנסקי ואוהד חסון
-    public static String Encryption(String sentence, int words) {
+    //ע"י יואב פנסקי
+    public static String encryption(String sentence, int words) {
         String word1 = "";
         String word2 = "";
         String word3 = "";
@@ -85,8 +81,8 @@ public class Encryption
         return result;
     }
     //תוכנה לפענוח
-    //ע"י יואב פנסקי ואהד חסון
-    public static String Decryption(String sentence, int words) {
+    //ע"י יואב פנסקי
+    public static String decryption(String sentence, int words) {
         String result = sentence.replace('@', 'a');
         result = result.replace('#', 'e');
         result = result.replace('1', 'i');
