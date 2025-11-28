@@ -54,7 +54,7 @@ public class Encryption
         } else return false;
     }
     //תוכנה להצפנת
-    //ע"י יואב פנסקי
+    //ע"י יואב פנסקי ואוהד חסון
     public static String Encryption(String sentence, int words) {
         String word1 = "";
         String word2 = "";
@@ -84,7 +84,7 @@ public class Encryption
         return result;
     }
     //תוכנה לפענוח
-    //ע"י יואב פנסקי
+    //ע"י יואב פנסקי ואהד חסון
     public static String Decryption(String sentence, int words) {
         String result = sentence.replace('@', 'a');
         result = result.replace('#', 'e');
@@ -98,9 +98,10 @@ public class Encryption
         String word1 = "";
         String word2 = "";
         String word3 = "";
-        if (words == 2) {
+        if (words == 1){}
+        else if (words == 2) {
             word1 = result.substring(0, result.indexOf(" "));
-            word2 = result.substring(result.indexOf(" ") + 1, result.lastIndexOf(" "));
+            word2 = result.substring(result.indexOf(" ") + 1);
             result = word2 + ' ' + word1;
         } else {
             word1 = result.substring(0, result.indexOf(" "));
