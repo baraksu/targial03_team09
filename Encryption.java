@@ -34,7 +34,7 @@ public class Encryption
             System.out.println("The decrypted sentence: " + decryption(sentence, words));
         }
     }
-    // יואב פנסקי
+    // אוהד חסון
     public static int wordsNum(String str) {
         int withSpace = str.length();
         str = str.replace(" ", "");
@@ -45,13 +45,13 @@ public class Encryption
     //תוכנה לבדיקה האם המספר שהוכנס הוא 1 או 2
     //ע"י יואב פנסקי
     public static boolean checkNum(int num) {
-        if (num != 1 && num != 2) {
+        if (num == 1 || num == 2) {
             System.out.println(num + "is not a valid choice");
-            return true;
-        } else return false;
+            return false;
+        } else return true;
     }
     //תוכנה להצפנת
-    //ע"י יואב פנסקי
+    //ע"י יואב פנסקי ואוהד חסון
     public static String encryption(String sentence, int words) {
         String word1 = "";
         String word2 = "";
@@ -81,7 +81,7 @@ public class Encryption
         return result;
     }
     //תוכנה לפענוח
-    //ע"י יואב פנסקי
+    //ע"י יואב פנסקי ואהד חסון
     public static String decryption(String sentence, int words) {
         String result = sentence.replace('@', 'a');
         result = result.replace('#', 'e');
