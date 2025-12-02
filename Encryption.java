@@ -1,12 +1,12 @@
 /**
  * encryption & decryption Program
  *
- * @author Yoav Panski (219338951)and Ohad Hasson(217803477)
+ * @author Yoav Panski (219338951) Ohad Hasson(217803477)and yovel schwartz(334350014)
  * @version 26/11/2025 17:00
  */
 import java.util.*;
 //תוכנה ראשית
-//ע"י יואב פנסקי ואוהד חסון
+//ע"י יואב פנסקי אוהד חסון ויובל שוורץ
 public class Encryption
 {
     public static void main(String[] args){
@@ -34,7 +34,7 @@ public class Encryption
             System.out.println("The decrypted sentence: " + decryption(sentence, words));
         }
     }
-    // אוהד חסון
+    // אוהד חסון ויובל שוורץ
     public static int wordsNum(String str) {
         int withSpace = str.length();
         str = str.replace(" ", "");
