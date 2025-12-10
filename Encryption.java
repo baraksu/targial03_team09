@@ -27,6 +27,7 @@ public class Encryption
             System.out.println(sentence + "is not a valid choice");
             return;
         }
+        
         if (programNum == 1) {
             System.out.println("The encrypted sentence: " + encryption(sentence, words));
             return;
@@ -46,9 +47,12 @@ public class Encryption
     //ע"י יואב פנסקי
     public static boolean checkNum(int num) {
         if (num != 1 && num != 2) {
-            System.out.println(num + "is not a valid choice");
             return true;
-        } else return false;
+        } else {
+            System.out.println(num + "is not a valid choice");
+            return false;
+        }
+
     }
     //תוכנה להצפנת
     //ע"י יואב פנסקי ואוהד חסון
