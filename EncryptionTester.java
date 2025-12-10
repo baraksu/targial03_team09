@@ -29,7 +29,7 @@ public class EncryptionTester
         assertEquals(1,result);
     }
  @Test
-    public void testdecryption{
+    public void testdecryption(){
         String str = Encryption.decryption("t#rsc1#nc# b#tt#r c0mp&", 3);
         assertEquals("better computer science", str);
         
@@ -45,7 +45,7 @@ public class EncryptionTester
         str = Encryption.decryption("db1r", 1);
         assertEquals("bird", str);}
      @Test
-    public void testEncrypcion{
+    public void testEncrypcion(){
     str = Encryption.encryption("better computer science", 3);
         assertEquals(str, "t#rsc1#nc# b#tt#r c0mp&");
         
@@ -61,7 +61,7 @@ public class EncryptionTester
         str = Encryption.encryption("bird", 1);
         assertEquals(str, "db1r");}
     @Test
-    public void testCeckNum{        
+    public void testCeckNum(){        
         boolean bool = Encryption.checkNum(1);
         assertEquals(bool, false);
         
