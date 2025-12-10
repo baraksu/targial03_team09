@@ -46,7 +46,7 @@ public class EncryptionTester
         assertEquals("bird", str);}
      @Test
     public void testEncrypcion(){
-    str = Encryption.encryption("better computer science", 3);
+        String str = Encryption.encryption("better computer science", 3);
         assertEquals(str, "t#rsc1#nc# b#tt#r c0mp&");
         
         str = Encryption.encryption("very cool", 2);

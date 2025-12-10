@@ -45,10 +45,10 @@ public class Encryption
     //תוכנה לבדיקה האם המספר שהוכנס הוא 1 או 2
     //ע"י יואב פנסקי
     public static boolean checkNum(int num) {
-        if (num == 1 || num == 2) {
+        if (num != 1 && num != 2) {
             System.out.println(num + "is not a valid choice");
-            return false;
-        } else return true;
+            return true;
+        } else return false;
     }
     //תוכנה להצפנת
     //ע"י יואב פנסקי ואוהד חסון
