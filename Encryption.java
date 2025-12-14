@@ -16,6 +16,7 @@ public class Encryption
 
         int programNum = reader.nextInt();
         if (checkNum(programNum)) {
+            System.out.println(programNum + " is not a valid choice");
             return;
         }
         reader.nextLine();
@@ -24,7 +25,7 @@ public class Encryption
         int words = wordsNum(sentence);
 
         if (words > 3) {
-            System.out.println(sentence + "is not a valid choice");
+            System.out.println(sentence + "Contains more than 3 words. It is not a valid choice");
             return;
         }
         
@@ -49,7 +50,6 @@ public class Encryption
         if (num != 1 && num != 2) {
             return true;
         } else {
-            System.out.println(num + "is not a valid choice");
             return false;
         }
 
